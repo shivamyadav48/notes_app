@@ -38,13 +38,13 @@ final ThemeData lightTheme = ThemeData(
     ),
     useMaterial3: true,
     textTheme: const TextTheme(
-      bodyLarge: TextStyle(color: Colors.black),
-      bodyMedium: TextStyle(color: Colors.black),
+      bodyLarge: TextStyle(color: Colors.white),
+      bodyMedium: TextStyle(color: Colors.white),
     ),
     scaffoldBackgroundColor: Color(0xFF121212),
     appBarTheme: const AppBarTheme(
       backgroundColor: Color(0xFF4DD0E1),
-      foregroundColor: Colors.black,
+      foregroundColor: Colors.white,
     ),
   );
 
