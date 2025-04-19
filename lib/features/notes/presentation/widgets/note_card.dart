@@ -54,6 +54,9 @@ class NoteCard extends ConsumerWidget {
                   content: const Text('Are you sure you want to delete this note?'),
                   actions: [
                     TextButton(
+                      style: TextButton.styleFrom(
+                        foregroundColor: Colors.green,
+                      ),
                       onPressed: () => Navigator.pop(ctx, false),
                       child: const Text('Cancel'),
                     ),

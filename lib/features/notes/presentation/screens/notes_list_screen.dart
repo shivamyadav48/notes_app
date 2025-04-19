@@ -28,7 +28,12 @@ class NotesListScreen extends ConsumerWidget {
         backgroundColor: primaryColor,
         title: Row(
           children: [
-            Icon(Icons.note_add, color: textColor),
+            Image.asset(
+              'assets/app.png',
+              width: 24,
+              height: 24,
+            ),
+
             const SizedBox(width: 10),
             Text(
               'DriveNotes',
@@ -70,7 +75,7 @@ class NotesListScreen extends ConsumerWidget {
 
             const Divider(),
 
-            // 🔐 Logout Tile
+            //log out
             ListTile(
               leading: Icon(Icons.logout, color: theme.iconTheme.color),
               title: Text(

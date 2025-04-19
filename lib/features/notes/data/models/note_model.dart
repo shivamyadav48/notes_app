@@ -1,5 +1,9 @@
+import 'package:json_annotation/json_annotation.dart';
 import '../../domain/entities/note.dart';
 
+part 'note_model.g.dart';
+
+@JsonSerializable()
 class NoteModel extends Note {
   const NoteModel({
     required super.id,
@@ -18,4 +22,10 @@ class NoteModel extends Note {
       modifiedTime: (file.modifiedTime ?? DateTime.now()).toUtc(),
     );
   }
+
+  /// 💾 For local JSON storage
+  factory NoteModel.fromJson(Map<String, dynamic> json) =>
+      _$NoteModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$NoteModelToJson(this);
 }

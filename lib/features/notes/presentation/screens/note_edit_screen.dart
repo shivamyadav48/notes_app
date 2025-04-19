@@ -233,9 +233,10 @@ class _NoteEditScreenState extends ConsumerState<NoteEditScreen> {
                 const SizedBox(height: 16),
                 Expanded(
                   child: Card(
+                    margin: EdgeInsets.only(bottom: 42),
                     elevation: 2,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
+                      borderRadius: BorderRadius.circular(22),
                     ),
                     child: Padding(
                       padding: const EdgeInsets.all(16.0),

@@ -1,6 +1,11 @@
+import 'package:json_annotation/json_annotation.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+
 import '../../domain/entities/user.dart';
 
+part 'user_model.g.dart';
+
+@JsonSerializable()
 class UserModel extends User {
   UserModel({
     required String id,
@@ -17,4 +22,9 @@ class UserModel extends User {
       photoUrl: account.photoUrl,
     );
   }
+
+  factory UserModel.fromJson(Map<String, dynamic> json) =>
+      _$UserModelFromJson(json);
+
+  Map<String, dynamic> toJson() => _$UserModelToJson(this);
 }
