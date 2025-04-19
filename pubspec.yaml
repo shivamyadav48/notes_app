@@ -1,0 +1,41 @@
+name: drive_notes
+description: A Flutter app for managing notes synced with Google Drive.
+version: 1.0.0
+environment:
+  sdk: '>=2.17.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_riverpod: ^2.6.1
+  dio: ^5.8.0+1
+  googleapis: ^14.0.0
+  googleapis_auth: ^2.0.0
+  google_sign_in: ^6.3.0
+  freezed_annotation: ^3.0.0
+  json_annotation: ^4.9.0
+  json_serializable: ^6.9.5
+  go_router: ^15.0.0
+  connectivity_plus: ^6.1.3
+  shared_preferences: ^2.5.3
+  uuid: ^4.5.1
+  flutter_secure_storage: ^9.2.4
+  http: ^1.3.0
+  intl: ^0.20.2
+  font_awesome_flutter: ^10.7.0
+  cupertino_icons: ^1.0.2
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^2.4.15
+  freezed: ^3.0.6
+  mockito: ^5.4.5
+
+flutter:
+  assets:
+    - assets/app.png
+    - assets/app2.png
+
+  uses-material-design: true
