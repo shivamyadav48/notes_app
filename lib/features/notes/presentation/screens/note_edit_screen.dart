@@ -60,7 +60,7 @@ class _NoteEditScreenState extends ConsumerState<NoteEditScreen> {
       final content = _contentController.text.trim();
 
       if (noteId != null) {
-        await ref.read(updateNoteUseCaseProvider)(noteId, content);
+        await ref.read(updateNoteUseCaseProvider)(noteId, title, content);
       } else {
         await ref.read(createNoteUseCaseProvider)(title, content);
       }

@@ -27,8 +27,8 @@ class NotesRepositoryImpl implements NotesRepository {
   }
 
   @override
-  Future<void> updateNote(String id, String content) {
-    return remote.updateNote(id, content);
+  Future<void> updateNote(String id, String title, String content) {
+    return remote.updateNote(id, title, content);
   }
 
   @override

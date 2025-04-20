@@ -100,13 +100,19 @@ class DriveNotesRemoteDataSource {
   }
 
   /// Update existing note by fileId
-  Future<void> updateNote(String fileId, String newContent) async {
+  Future<void> updateNote(String fileId, String title, String newContent) async {
     final driveApi = await _getDriveApi();
 
+    // Create a File object with updated metadata
+    final file = drive.File()
+      ..name = title; // This sets the title/name of the file
+
+    // Prepare the content
     final contentBytes = Uint8List.fromList(utf8.encode(newContent));
     final media = drive.Media(Stream.value(contentBytes), contentBytes.length);
 
-    await driveApi.files.update(drive.File(), fileId, uploadMedia: media);
+    // Update both metadata and content
+    await driveApi.files.update(file, fileId, uploadMedia: media);
   }
 
   /// Delete a note by fileId
