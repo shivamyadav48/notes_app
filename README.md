@@ -30,6 +30,10 @@ DriveNotes is a Flutter app that allows users to sign in with Google OAuth 2.0 a
    git clone https://github.com/yourusername/drivenotes.git
    cd drivenotes
 2. Install dependencies:
+
+https://github.com/user-attachments/assets/47458303-f2e6-4541-b0ce-f9ffba933a4f
+
+
 flutter pub get
 
 3. Set up Google API credentials:
