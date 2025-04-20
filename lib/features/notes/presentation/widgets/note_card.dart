@@ -73,6 +73,7 @@ class NoteCard extends ConsumerWidget {
 
               if (shouldDelete == true) {
                 await ref.read(deleteNoteUseCaseProvider)(note.id);
+                ref.invalidate(notesListProvider);
               }
             },
             child: Padding(

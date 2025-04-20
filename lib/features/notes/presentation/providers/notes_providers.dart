@@ -28,3 +28,8 @@ final notesListProvider = FutureProvider<List<Note>>((ref) {
   final usecase = ref.read(getNotesUseCaseProvider);
   return usecase();
 });
+final singleNoteProvider = FutureProvider.family<Note, String>((ref, id) async {
+  final notes = await ref.watch(notesListProvider.future);
+  return notes.firstWhere((note) => note.id == id,
+      orElse: () => throw Exception('Note not found'));
+});
