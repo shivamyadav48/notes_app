@@ -23,7 +23,7 @@ class NoteModel extends Note {
     );
   }
 
-  /// 💾 For local JSON storage
+  ///  For local JSON storage
   factory NoteModel.fromJson(Map<String, dynamic> json) =>
       _$NoteModelFromJson(json);
 

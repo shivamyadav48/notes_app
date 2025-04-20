@@ -1,4 +1,3 @@
-// lib/shared/utils/validators.dart
 class Validators {
   static String? validateNoteTitle(String? value) {
     if (value == null || value.trim().isEmpty) {

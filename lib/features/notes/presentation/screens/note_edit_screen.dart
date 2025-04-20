@@ -116,10 +116,12 @@ class _NoteEditScreenState extends ConsumerState<NoteEditScreen> {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(context, false),
-            child: const Text('Cancel',
-            style: TextStyle(
-              color: Colors.green,
-            ),),
+            child: const Text(
+              'Cancel',
+              style: TextStyle(
+                color: Colors.green,
+              ),
+            ),
           ),
           TextButton(
             onPressed: () => Navigator.pop(context, true),

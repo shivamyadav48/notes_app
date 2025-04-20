@@ -33,7 +33,6 @@ class NotesListScreen extends ConsumerWidget {
               width: 24,
               height: 24,
             ),
-
             const SizedBox(width: 10),
             Text(
               'DriveNotes',
@@ -91,17 +90,19 @@ class NotesListScreen extends ConsumerWidget {
                     actions: [
                       TextButton(
                         onPressed: () => Navigator.pop(ctx, false),
-                        child: const Text('Cancel',
+                        child: Text(
+                          'Cancel',
                           style: TextStyle(
-                              color: Colors.black
-                          ),),
+                              color: theme.textTheme.bodyMedium?.color),
+                        ),
                       ),
                       TextButton(
                         onPressed: () => Navigator.pop(ctx, true),
-                        child: const Text('Logout',
-                        style: TextStyle(
-                          color: Colors.black
-                        ),),
+                        child: Text(
+                          'Logout',
+                          style: TextStyle(
+                              color: theme.textTheme.bodyMedium?.color),
+                        ),
                       ),
                     ],
                   ),
@@ -115,8 +116,7 @@ class NotesListScreen extends ConsumerWidget {
             ),
           ],
         ),
-      )
-,
+      ),
       body: Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(

@@ -23,7 +23,6 @@ class EmptyNotesWidget extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          // Animated note icon
           TweenAnimationBuilder<double>(
             tween: Tween<double>(begin: 0.8, end: 1.0),
             duration: const Duration(seconds: 2),
