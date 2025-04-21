@@ -22,7 +22,7 @@ final dioProvider = Provider<Dio>((ref) {
         return handler.next(options);
       },
       onError: (DioException e, handler) {
-        // Handle token expiration and refresh logic here if needed
+        // Handle token expiration and refresh logic here
         return handler.next(e);
       },
     ),

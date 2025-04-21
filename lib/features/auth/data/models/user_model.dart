@@ -12,14 +12,13 @@ class UserModel extends User {
     required String name,
     required String email,
     String? photoUrl,
-  }) : super(id: id, name: name, email: email, photoUrl: photoUrl);
+  }) : super(id: id, name: name, email: email);
 
   factory UserModel.fromGoogleSignInAccount(GoogleSignInAccount account) {
     return UserModel(
       id: account.id,
       name: account.displayName ?? '',
       email: account.email,
-      photoUrl: account.photoUrl,
     );
   }
 
