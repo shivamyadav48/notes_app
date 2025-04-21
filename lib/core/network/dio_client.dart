@@ -7,7 +7,7 @@ final dioProvider = Provider<Dio>((ref) {
       ref.watch(SecureStorageService as ProviderListenable);
   final dio = Dio(
     BaseOptions(
-      connectTimeout: Duration(seconds: 30), // Convert to int
+      connectTimeout: Duration(seconds: 30),
       receiveTimeout: Duration(seconds: 30),
     ),
   );
