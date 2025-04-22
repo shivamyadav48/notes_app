@@ -210,8 +210,6 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                   ),
 
                   const SizedBox(height: 24),
-
-                  // Privacy policy text
                   Text(
                     'By signing in, you agree to our Terms and Privacy Policy',
                     textAlign: TextAlign.center,

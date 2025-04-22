@@ -13,6 +13,7 @@ class DriveNotesApp extends ConsumerWidget {
 
     return MaterialApp.router(
       title: 'DriveNotes',
+
       debugShowCheckedModeBanner: false,
       theme: theme,
       routerConfig: router,
