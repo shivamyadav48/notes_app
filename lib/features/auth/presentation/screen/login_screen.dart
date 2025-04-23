@@ -15,7 +15,7 @@ class LoginScreen extends ConsumerStatefulWidget {
 class _LoginScreenState extends ConsumerState<LoginScreen> {
   bool _isLoading = false;
 
-  // Define the app's primary color - bright yellow #FFDE21
+
   final Color appYellow = const Color(0xFFFFDE21);
 
   Future<void> _handleGoogleSignIn(BuildContext context) async {
