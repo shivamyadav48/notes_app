@@ -183,7 +183,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
 
                             const SizedBox(height: 16),
 
-                            // Optional: Add a text divider
+
                             Row(
                               children: [
                                 Expanded(
