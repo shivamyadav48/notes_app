@@ -189,14 +189,14 @@ class NotesListScreen extends ConsumerWidget {
             style: TextStyle(
               fontSize: 20,
               fontWeight: FontWeight.w500,
-              color: colorScheme.onBackground.withOpacity(0.7),
+              color: colorScheme.onSurface.withOpacity(0.7),
             ),
           ),
           const SizedBox(height: 8),
           Text(
             "Tap the + button to create your first note",
             style: TextStyle(
-              color: colorScheme.onBackground.withOpacity(0.6),
+              color: colorScheme.onSurface.withOpacity(0.6),
             ),
           ),
         ],
