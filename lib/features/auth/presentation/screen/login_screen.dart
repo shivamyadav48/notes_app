@@ -35,7 +35,6 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
         ),
       );
 
-      // Navigate to Notes screen
       context.goNamed(AppRoutes.notesList);
     } catch (e) {
       if (!mounted) return;
