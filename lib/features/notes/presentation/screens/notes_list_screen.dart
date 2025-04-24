@@ -86,7 +86,7 @@ class NotesListScreen extends ConsumerWidget {
                   context: context,
                   builder: (ctx) => AlertDialog(
                     title: const Text('Logout'),
-                    content: const Text('Are you sure you want to log out?'),
+                    content: const Text('Are you sure you want to log out ?'),
                     actions: [
                       TextButton(
                         onPressed: () => Navigator.pop(ctx, false),
