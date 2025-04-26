@@ -35,7 +35,7 @@ class NotesListScreen extends ConsumerWidget {
             ),
             const SizedBox(width: 10),
             Text(
-              'DriveNotes',
+              'Drive Notes',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: textColor,

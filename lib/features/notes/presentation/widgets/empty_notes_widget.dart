@@ -60,7 +60,7 @@ class EmptyNotesWidget extends StatelessWidget {
 
           const SizedBox(height: 12),
 
-          // Description text
+
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 32),
             child: Text(
