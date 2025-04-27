@@ -67,7 +67,7 @@ class EmptyNotesWidget extends StatelessWidget {
               'Create your first note to get started. Capture thoughts, ideas, or anything you want to remember.',
               textAlign: TextAlign.center,
               style: textTheme.bodyMedium?.copyWith(
-                color: colorScheme.onBackground.withOpacity(0.7),
+                color: colorScheme.onSurface.withOpacity(0.7),
               ),
             ),
           ),
