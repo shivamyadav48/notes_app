@@ -74,7 +74,7 @@ class EmptyNotesWidget extends StatelessWidget {
 
           const SizedBox(height: 32),
 
-          // Create note button
+
           if (onCreateNote != null)
             ElevatedButton.icon(
               onPressed: onCreateNote,
