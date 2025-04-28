@@ -83,7 +83,6 @@ class NoteForm extends StatelessWidget {
 
           const SizedBox(height: 16),
 
-          // Category input (optional)
           if (categoryController != null)
             Container(
               decoration: _boxDecoration(context),

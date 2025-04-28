@@ -55,9 +55,8 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // Create contrasting colors based on the yellow
     final darkColor =
-        Colors.grey[850]; // Dark text that contrasts well with yellow
+        Colors.grey[850];
 
     return Scaffold(
       body: Container(
