@@ -90,7 +90,7 @@ class NoteForm extends StatelessWidget {
                 controller: categoryController,
                 decoration: _inputDecoration(
                   context: context,
-                  hintText: 'Category (optional)',
+                  hintText: 'Category',
                   icon: Icons.category,
                 ),
               ),
