@@ -15,9 +15,6 @@ class LoginScreen extends ConsumerStatefulWidget {
 class _LoginScreenState extends ConsumerState<LoginScreen> {
   bool _isLoading = false;
 
-
-  final Color appYellow = const Color(0xFFFFDE21);
-
   Future<void> _handleGoogleSignIn(BuildContext context) async {
     setState(() => _isLoading = true);
 
@@ -30,7 +27,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text("Welcome ${user.name}"),
-          backgroundColor: Colors.green,
+          backgroundColor: Theme.of(context).colorScheme.tertiaryContainer,
           behavior: SnackBarBehavior.floating,
         ),
       );
@@ -42,7 +39,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
           content: Text("Login failed: $e"),
-          backgroundColor: Colors.red,
+          backgroundColor: Theme.of(context).colorScheme.errorContainer,
           behavior: SnackBarBehavior.floating,
         ),
       );
@@ -55,8 +52,8 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final darkColor =
-        Colors.grey[850];
+    final colorScheme = Theme.of(context).colorScheme;
+    final textTheme = Theme.of(context).textTheme;
 
     return Scaffold(
       body: Container(
@@ -65,8 +62,8 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
             colors: [
-              appYellow,
-              appYellow.withOpacity(0.7),
+              colorScheme.primary,
+              colorScheme.primary.withOpacity(0.7),
             ],
           ),
         ),
@@ -87,10 +84,10 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                   // App Name
                   Text(
                     'DriveNotes',
-                    style: Theme.of(context).textTheme.headlineMedium?.copyWith(
-                          color: darkColor,
-                          fontWeight: FontWeight.bold,
-                        ),
+                    style: textTheme.headlineMedium?.copyWith(
+                      color: colorScheme.onPrimary,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   const SizedBox(height: 8),
 
@@ -99,7 +96,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                     'Sync your notes seamlessly across devices',
                     textAlign: TextAlign.center,
                     style: TextStyle(
-                      color: darkColor?.withOpacity(0.8),
+                      color: colorScheme.onPrimary.withOpacity(0.8),
                     ),
                   ),
                   const SizedBox(height: 60),
@@ -116,8 +113,8 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                           begin: Alignment.topLeft,
                           end: Alignment.bottomRight,
                           colors: [
-                            Color(0xFFFFDE21).withOpacity(0.1),
-                            Colors.white,
+                            colorScheme.primary.withOpacity(0.1),
+                            colorScheme.surface,
                           ],
                         ),
                       ),
@@ -127,13 +124,10 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                           children: [
                             Text(
                               'Get Started',
-                              style: Theme.of(context)
-                                  .textTheme
-                                  .titleLarge
-                                  ?.copyWith(
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black87,
-                                  ),
+                              style: textTheme.titleLarge?.copyWith(
+                                fontWeight: FontWeight.bold,
+                                color: colorScheme.onSurface,
+                              ),
                             ),
                             const SizedBox(height: 24),
 
@@ -144,34 +138,35 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                               child: ElevatedButton.icon(
                                 icon: Icon(
                                   FontAwesomeIcons.google,
-                                  color: Colors.white,
+                                  color: colorScheme.onPrimary,
                                   size: 20,
                                 ),
                                 label: _isLoading
                                     ? SizedBox(
-                                        width: 20,
-                                        height: 20,
-                                        child: CircularProgressIndicator(
-                                          strokeWidth: 2,
-                                          color: Colors.black87,
-                                        ),
-                                      )
+                                  width: 20,
+                                  height: 20,
+                                  child: CircularProgressIndicator(
+                                    strokeWidth: 2,
+                                    color: colorScheme.onPrimary,
+                                  ),
+                                )
                                     : Text(
-                                        "Sign in with Google",
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.w500,
-                                          fontSize: 16,
-                                        ),
-                                      ),
+                                  "Sign in with Google",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 16,
+                                    color: colorScheme.onPrimary,
+                                  ),
+                                ),
                                 onPressed: _isLoading
                                     ? null
                                     : () => _handleGoogleSignIn(context),
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor: Color(0xFFFFDE21),
-                                  foregroundColor: Colors.black87,
+                                  backgroundColor: colorScheme.primary,
+                                  foregroundColor: colorScheme.onPrimary,
                                   elevation: 2,
                                   shadowColor:
-                                      Color(0xFFFFDE21).withOpacity(0.5),
+                                  colorScheme.primary.withOpacity(0.5),
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(10),
                                   ),
@@ -181,24 +176,25 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
 
                             const SizedBox(height: 16),
 
-
                             Row(
                               children: [
                                 Expanded(
-                                    child: Divider(color: Colors.grey[300])),
+                                    child: Divider(
+                                        color: colorScheme.outlineVariant)),
                                 Padding(
                                   padding: const EdgeInsets.symmetric(
                                       horizontal: 16),
                                   child: Text(
                                     "or",
                                     style: TextStyle(
-                                      color: Colors.grey[600],
+                                      color: colorScheme.outline,
                                       fontSize: 14,
                                     ),
                                   ),
                                 ),
                                 Expanded(
-                                    child: Divider(color: Colors.grey[300])),
+                                    child: Divider(
+                                        color: colorScheme.outlineVariant)),
                               ],
                             ),
                           ],
@@ -213,7 +209,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 12,
-                      color: darkColor?.withOpacity(0.7),
+                      color: colorScheme.onPrimary.withOpacity(0.7),
                     ),
                   ),
                 ],
