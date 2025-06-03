@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 
 final ThemeData lightTheme = ThemeData(
   colorScheme: ColorScheme.fromSeed(
-    seedColor: const Color(0xFFFFDE21), // Yellow as the base
+    seedColor: const Color(0xFFFFDE21),
+    // Yellow as the base
     brightness: Brightness.light,
     primary: const Color(0xFFFFDE21),
     onPrimary: Colors.black87,
@@ -31,20 +32,19 @@ final ThemeData lightTheme = ThemeData(
   ),
 );
 
-   final ThemeData darkTheme = ThemeData(
-    colorScheme: ColorScheme.fromSeed(
-      seedColor: Color(0xFF4DD0E1), // Teal blue for dark mode
-      brightness: Brightness.dark,
-    ),
-    useMaterial3: true,
-    textTheme: const TextTheme(
-      bodyLarge: TextStyle(color: Colors.white),
-      bodyMedium: TextStyle(color: Colors.white),
-    ),
-    scaffoldBackgroundColor: Color(0xFF121212),
-    appBarTheme: const AppBarTheme(
-      backgroundColor: Color(0xFF4DD0E1),
-      foregroundColor: Colors.white,
-    ),
-  );
-
+final ThemeData darkTheme = ThemeData(
+  colorScheme: ColorScheme.fromSeed(
+    seedColor: Color(0xFF4DD0E1), // Teal blue for dark mode
+    brightness: Brightness.dark,
+  ),
+  useMaterial3: true,
+  textTheme: const TextTheme(
+    bodyLarge: TextStyle(color: Colors.white),
+    bodyMedium: TextStyle(color: Colors.white),
+  ),
+  scaffoldBackgroundColor: Color(0xFF121212),
+  appBarTheme: const AppBarTheme(
+    backgroundColor: Color(0xFF4DD0E1),
+    foregroundColor: Colors.white,
+  ),
+);
