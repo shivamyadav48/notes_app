@@ -150,9 +150,7 @@ class NoteForm extends StatelessWidget {
                     ),
                   ),
                 ),
-
               if (onCancel != null) const SizedBox(width: 16),
-
               Expanded(
                 flex: onCancel != null ? 2 : 1,
                 child: ElevatedButton(

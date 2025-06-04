@@ -6,6 +6,7 @@ import '../screens/note_detail_screen.dart';
 
 class NoteCard extends ConsumerWidget {
   final Note note;
+
   const NoteCard({super.key, required this.note});
 
   @override
@@ -51,7 +52,8 @@ class NoteCard extends ConsumerWidget {
                 context: context,
                 builder: (ctx) => AlertDialog(
                   title: const Text('Delete Note'),
-                  content: const Text('Are you sure you want to delete this note ?'),
+                  content:
+                      const Text('Are you sure you want to delete this note ?'),
                   actions: [
                     TextButton(
                       style: TextButton.styleFrom(
@@ -77,7 +79,8 @@ class NoteCard extends ConsumerWidget {
               }
             },
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 14.0),
+              padding:
+                  const EdgeInsets.symmetric(horizontal: 16.0, vertical: 14.0),
               child: Row(
                 children: [
                   Container(
