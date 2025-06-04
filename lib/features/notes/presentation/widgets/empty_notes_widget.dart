@@ -60,7 +60,6 @@ class EmptyNotesWidget extends StatelessWidget {
 
           const SizedBox(height: 12),
 
-
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 32),
             child: Text(
@@ -74,7 +73,6 @@ class EmptyNotesWidget extends StatelessWidget {
 
           const SizedBox(height: 32),
 
-
           if (onCreateNote != null)
             ElevatedButton.icon(
               onPressed: onCreateNote,
@@ -84,7 +82,7 @@ class EmptyNotesWidget extends StatelessWidget {
                 backgroundColor: primaryColor,
                 foregroundColor: onPrimary,
                 padding:
-                const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+                    const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12),
                 ),
