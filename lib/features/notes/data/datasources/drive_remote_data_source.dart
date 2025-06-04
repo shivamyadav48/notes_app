@@ -100,7 +100,8 @@ class DriveNotesRemoteDataSource {
   }
 
   /// Update existing note by fileId
-  Future<void> updateNote(String fileId, String title, String newContent) async {
+  Future<void> updateNote(
+      String fileId, String title, String newContent) async {
     final driveApi = await _getDriveApi();
     final file = drive.File()
       ..name = title; // This sets the title/name of the file
